@@ -1,0 +1,43 @@
+# ==========================
+# Java Project (Eclipse, IntelliJ, VS Code)
+# ==========================
+
+# Compiled Java files
+*.class
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ==========================
+# IDE-specific files
+# ==========================
+
+# Eclipse
+.metadata/
+.settings/
+.project
+.classpath
+bin/
+tmp/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# ==========================
+# Archives and temp files
+# ==========================
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.tmp
+*.bak
