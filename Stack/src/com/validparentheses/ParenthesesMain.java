@@ -47,7 +47,7 @@ public class ParenthesesMain {
         if (isValid)
             System.out.println("Valid Parentheses");
         else
-            System.out.println("Invalid Parentheses");
+            System.out.println("Invalid Parentheses.");
 
         sc.close();
     }
