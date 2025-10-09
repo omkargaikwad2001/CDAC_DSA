@@ -97,6 +97,25 @@ public class MyCharLL {
 		
 	}
 	
+	//optimised
+	public void addAlpha(char ch) {
+		
+		MyNode newNode = new MyNode();
+		newNode.setData(ch);
+		newNode.setNext(null);
+		
+		if(head == null) {
+			head = newNode;
+		}
+		else {
+			
+			newNode.setNext(head);
+			head = newNode;
+		}
+		
+		
+	}
+	
 	//display()
 	public void display() {
 		
