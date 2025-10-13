@@ -326,4 +326,83 @@ public class SinglyLL {
 		
 	}
 	
+	//find max
+	public int getMax() {
+		
+		int max = -9999;
+		
+		Node temp = head;
+		
+		if(head == null) {
+			System.out.println("Linked list is empty...");
+		}
+		else {
+			while(temp!=null) {
+				
+				if(temp.getData()>max) {
+					max = temp.getData();
+				}
+				
+				temp = temp.getNext();
+			}
+		}
+		return max;
+	}
+	
+	//findOccurrence(int key) if not found return -1
+	
+	public int findOccurence(int key) {
+		
+		Node temp = head;
+		
+		int occ=0;
+		
+		if(head == null) {
+			System.out.println("Linked list is empty...");
+		}
+		else {
+			while(temp!=null) {
+				
+				if(temp.getData()==key) {
+					occ++;
+				}
+				
+				temp = temp.getNext();
+			}
+		}
+		
+		return occ;
+	}
+	
+	//deleteDuplicate delete second occurence if exist
+	public void deleteDuplicate() {
+
+	    if (head == null) {
+	        System.out.println("Linked list is empty...");
+	        return;
+	    }
+
+	    Node current = head;
+
+	    while (current != null) {
+	        Node prev = current;
+	        Node runner = current.getNext();
+
+	        while (runner != null) {
+	            if (runner.getData() == current.getData()) {
+	                // Delete duplicate node
+	                prev.setNext(runner.getNext());
+	                runner = runner.getNext();
+	            } else {
+	                prev = runner;
+	                runner = runner.getNext();
+	            }
+	        }
+
+	        current = current.getNext();
+	    }
+
+	    System.out.println("All duplicate occurrences deleted, only first occurrences remain.");
+	}
+	
 }

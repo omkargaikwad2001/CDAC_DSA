@@ -25,6 +25,9 @@ public class SinglyLLMain {
 			System.out.println("Enter 8 to add at particular position");
 			System.out.println("Enter 9 to delete in position");
 			System.out.println("Enter 10 to Reverse");
+			System.out.println("Enter 11 to GetMax");
+			System.out.println("Enter 12 to Find occurence");
+			System.out.println("Enter 13 to delete duplicate");
 			System.out.println("Enter 99 to display");
 			System.out.println("Enter 0 to exit");
 			
@@ -90,6 +93,26 @@ public class SinglyLLMain {
 				
 				s.reverse();
 				
+				break;
+				
+			case 11:
+				
+				System.out.println("Max = "+s.getMax());
+			
+				break;
+				
+			case 12:
+				
+				System.out.println("Enter value to find occurence in LL");
+				int val = sc.nextInt();
+				System.out.println("Occurence = "+s.findOccurence(val));
+			
+				break;
+				
+			case 13:
+				
+				s.deleteDuplicate();
+			
 				break;
 				
 			case 99:
