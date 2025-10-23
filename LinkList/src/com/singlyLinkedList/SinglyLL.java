@@ -405,4 +405,42 @@ public class SinglyLL {
 	    System.out.println("All duplicate occurrences deleted, only first occurrences remain.");
 	}
 	
+	// Sort linked list using Insertion Sort (rearrange nodes, not values)
+	public void insertionSort() {
+
+	    if (head == null || head.getNext() == null) {
+	        System.out.println("Linked list is empty or has only one element...");
+	        return;
+	    }
+
+	    Node sorted = null;   // new sorted linked list
+	    Node current = head;  // current node from original list
+
+	    while (current != null) {
+	        Node next = current.getNext(); // store next before re-linking
+	        sorted = sortedInsert(sorted, current); // insert current into sorted list
+	        current = next;
+	    }
+
+	    head = sorted;
+	    System.out.println("Linked list sorted using insertion sort...");
+	}
+
+	// Helper: inserts a node into the correct sorted position
+	private Node sortedInsert(Node sorted, Node newNode) {
+	    if (sorted == null || newNode.getData() < sorted.getData()) {
+	        newNode.setNext(sorted);
+	        sorted = newNode;
+	    } else {
+	        Node temp = sorted;
+	        while (temp.getNext() != null && temp.getNext().getData() < newNode.getData()) {
+	            temp = temp.getNext();
+	        }
+	        newNode.setNext(temp.getNext());
+	        temp.setNext(newNode);
+	    }
+	    return sorted;
+	}
+
+	
 }

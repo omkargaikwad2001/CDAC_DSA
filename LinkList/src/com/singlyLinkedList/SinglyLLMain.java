@@ -28,6 +28,7 @@ public class SinglyLLMain {
 			System.out.println("Enter 11 to GetMax");
 			System.out.println("Enter 12 to Find occurence");
 			System.out.println("Enter 13 to delete duplicate");
+			System.out.println("Enter 14 to sort linked list using insertion sort");
 			System.out.println("Enter 99 to display");
 			System.out.println("Enter 0 to exit");
 			
@@ -114,6 +115,10 @@ public class SinglyLLMain {
 				s.deleteDuplicate();
 			
 				break;
+				
+			case 14:
+			    s.insertionSort();
+			    break;
 				
 			case 99:
 				

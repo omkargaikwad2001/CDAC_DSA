@@ -4,8 +4,6 @@ public class C2StackMain {
 
 	public static void main(String[] args) {
 		
-		C2Stack s = new C2Stack(5);
-		
 		C2Stack stack = new C2Stack(10);
 
         // Push into stack1
