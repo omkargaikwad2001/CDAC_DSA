@@ -72,18 +72,67 @@ public class BinarySearchTreeMain {
       BinarySearchTree bt = new BinarySearchTree();
       bt.add(50);
       bt.add(30);
-      bt.add(70);
-      bt.add(20);
+      bt.add(90);
+      bt.add(10);
       bt.add(40);
+      bt.add(70);
+      bt.add(100);
+      bt.add(35);
       bt.add(60);
       bt.add(80);
+      bt.add(65);
       
 //      bt.pre_order(bt.getRoot());
       
 //      bt.deleteNode(30);
       
 //      bt.pre_order(bt.getRoot());
-      bt.degreeOfNode(bt.getRoot());
-    	
+//      bt.degreeOfNode(bt.getRoot());
+//      System.out.println("Height of root = "+bt.height());
+//      bt.deleteAll();
+//      bt.pre_order(bt.getRoot());
+//      System.out.println("Height of root = "+bt.height());
+    		
+//      System.out.println();
+//      Node ans = bt.BFS(80);
+//      if(ans==null) {
+//    	  System.out.println("Not found");
+//      }
+//      else {
+//    	  System.out.println(ans.getData()+" BFS Found");
+//      }
+//      
+//      
+//      Node ans2 = bt.DFS(80);
+//      if(ans==null) {
+//    	  System.out.println("Not found");
+//      }
+//      else {
+//    	  System.out.println(ans2.getData()+" DFS Found");
+//      }
+//      
+//      Node ans3 = bt.binarySearch(80);
+//      if(ans==null) {
+//    	  System.out.println("Not found");
+//      }
+//      else {
+//    	  System.out.println(ans3.getData()+" BinarySearch Found");
+//      }
+//      
+//      Node ans4[] = bt.binarySearchWithParent(40);
+//      if(ans4[0]==null) {
+//    	  System.out.println("Not found");
+//      }
+//      else {
+//    	  System.out.println(ans4[0].getData()+" BinarySearch Found parent = "+ans4[1].getData());
+//      }
+      
+      bt.in_order(bt.getRoot());
+      
+      bt.delete(100);
+      
+      System.out.println();
+      bt.in_order(bt.getRoot());
+      
     }
 }
